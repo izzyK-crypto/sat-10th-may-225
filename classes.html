@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Environment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="classes.css">
+</head>
+<body onclick="hideFormOnOutsideClick(event)" style="background-color: #000000;">
+
+  <div class="navbar" id="navbar">
+        <img src="glor.png" alt="Logo" class="navbar-logo">
+        <span id="hup">Glory of Christ Church, kawaala</span>
+      </div>
+      
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            let navbar = document.getElementById("navbar");
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = "-60px";
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });
+        </script>
+
+<!-- 🔙 Back to Home Button -->
+<div class="back">
+  <a href="index.html" id="back">
+    ← Back to Home
+  </a>
+</div>
+
+    <div class="container">
+      <div class="sep">
+        <section class="church-growth">
+            <div class="title-with-logo">
+                <img src="glot.png" alt="Church Logo" class="logo">
+                <h2 class="section-title">GROWTH <span id="sp">Department</span></h2>
+              </div>
+              
+              
+            <p class="section-description">
+                <!--<a href="https://gloryofchristug.org/" target="_blank">
+                    <img src="here.png" alt="Glory of Christ Uganda" style="width:90px; height:auto;" id="klik">
+                  </a>-->
+                  <span>Dedicated to teaching and guiding members</span>
+                  
+                to grow in their faith and knowledge of Christ. Through biblical teachings and spiritual mentorship, we aim to 
+                strengthen the body of Christ and nurture a deeper relationship with God.
+            </p>       
+            </div>             
+
+<div class="tw">
+<section class="image-section">
+    <img src="cover.jpg" alt="Descriptive Alt Text" class="responsive-img" id="sep">
+  </section>
+
+  <!-- Background Smoke Video -->
+  <video class="background-video" autoplay muted loop>
+    <source src="sm3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Thumbnail Image -->
+  <!--<img src="kiw.png" alt="Thumbnail" class="thumbnail">
+
+  <!-- Text Display Box -->
+  <div class="overlay">
+    <div class="text-box" id="text-box"></div>
+    <div class="controls">
+      <button onclick="prevSentence()" id="lef"><</button>
+      <button onclick="nextSentence()" id="ryt">></button>
+    </div>
+  </div>
+
+  <script>
+    const sentences = [
+      "Welcome to personal development!",
+      "Every reading begins with a single word.",
+      "The word of God is a double edged sword.",
+      "See your life change now.",
+      "This is just the beginning..."
+    ];
+
+    let index = 0;
+    const textBox = document.getElementById('text-box');
+    let typingTimeout;
+    let autoAdvanceTimeout;
+    const typingSpeed = 50; // milliseconds per letter
+    const pauseAfterTyping = 2000; // milliseconds after typing completes
+
+    function typeSentence(sentence, i = 0, doneCallback = null) {
+      clearTimeout(typingTimeout);
+      if (i < sentence.length) {
+        textBox.textContent += sentence[i];
+        typingTimeout = setTimeout(() => typeSentence(sentence, i + 1, doneCallback), typingSpeed);
+      } else if (doneCallback) {
+        doneCallback();
+      }
+    }
+
+    function showSentence() {
+      clearTimeout(typingTimeout);
+      clearTimeout(autoAdvanceTimeout);
+      textBox.textContent = '';
+      typeSentence(sentences[index], 0, () => {
+        autoAdvanceTimeout = setTimeout(() => {
+          nextSentence();
+        }, pauseAfterTyping);
+      });
+    }
+
+    function nextSentence() {
+      index = (index + 1) % sentences.length;
+      showSentence();
+    }
+
+    function prevSentence() {
+      index = (index - 1 + sentences.length) % sentences.length;
+      showSentence();
+    }
+
+    // Initial load
+    window.addEventListener("load", showSentence);
+  </script>
+  
+  <div class="int">     
+  <h2 class="my-text">CLASSES</h2>
+  <p id="newp">Click buttons below to go through each of them !!</p>
+</div> 
+
+</div>
+  
+  
+<div class="cla">
+  <div class="class-tabs">
+      <div class="class-tab active" onclick="showClass(1)">Encounter</div>
+      <div class="class-tab" onclick="showClass(2)">Transformation</div>
+      <div class="class-tab" onclick="showClass(3)">Membership</div>
+      <div class="class-tab" onclick="showClass(4)">Servants heart</div>
+      <div class="class-tab" onclick="showClass(5)">Christology</div>
+  </div>
+
+  <div class="class-container" id="classContent">
+      <div class="class-text">
+          <h2 id="classTitle">Encounter</h2>
+          <p id="classDesc"></p>
+      </div>
+      <div class="class-image">
+          <img id="classImage" src="4.jpg" alt="Web Development">
+      </div>
+  </div>
+
+  <div class="class-details" id="classDetails">
+      <h2 id="detailTitle">Encounter with Christ</h2>
+      <p id="detailDesc">Experience a deep and personal relationship with Christ.</p>
+  </div>
+
+  <div class="form-container" id="joinForm" style="display: block;">
+      <h3 id="formHeader">Request to join Encounter class!</h3>
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+      <select id="lineage">
+          <option value="">Select Lineage</option>
+          <option value="No Lineage">No Lineage</option>
+          <option value="Esther">Esther</option>
+          <option value="Daniel">Daniel</option>
+          <option value="Solomon">Solomon</option>
+          <option value="Ephraim">Ephraim</option>
+          <option value="Joseph">Joseph</option>
+          <option value="Deborah">Deborah</option>
+          <option value="David">David</option>
+          <option value="Nehemiah">Nehemiah</option>
+          <option value="Joshua">Joshua</option>
+          <option value="Elijah">Elijah</option>
+          <option value="Moses">Moses</option>
+      </select>
+      <button onclick="submitForm()">Submit</button>
+  </div>
+</div>
+
+<script>
+  let currentClass = "Encounter"; // Default class
+  let classContent = [
+      { title: "Encounter", desc: "Experience a deep and personal relationship with Christ.", img: "4.jpg" },
+      { title: "Transformation", desc: "Grow spiritually and renew your mind through biblical teachings.", img: "form.jpg" },
+      { title: "Membership", desc: "Understand the values and beliefs of our church and become an active member.", img: "mem.jpg" },
+      { title: "Servants heart", desc: "Learn how to effectively share the Gospel with others.", img: "serva.jpg" },
+      { title: "Christology", desc: "Deepen your faith and become a committed leader with Christ virtues.", img: "7.jpg" }
+  ];
+
+  function showClass(classNumber) {
+      // Remove the active class from all tabs
+      const tabs = document.querySelectorAll(".class-tab");
+      tabs.forEach(tab => tab.classList.remove("active"));
+
+      // Add the active class to the clicked tab
+      const selectedTab = tabs[classNumber - 1];
+      selectedTab.classList.add("active");
+
+      // Update class content dynamically
+      currentClass = classContent[classNumber - 1].title;
+      document.getElementById("classTitle").innerText = currentClass;
+      document.getElementById("classDesc").innerText = classContent[classNumber - 1].desc;
+      document.getElementById("classImage").src = classContent[classNumber - 1].img;
+      document.getElementById("classImage").alt = currentClass;
+      document.getElementById("detailTitle").innerText = currentClass;
+      document.getElementById("detailDesc").innerText = classContent[classNumber - 1].desc;
+
+      // Update the form header dynamically based on the selected class
+      document.getElementById("formHeader").innerText = `Request to join ${currentClass} class!`;
+  }
+
+  function submitForm() {
+      let name = document.getElementById("fullName").value;
+      let phone = document.getElementById("phoneNumber").value;
+      let lineage = document.getElementById("lineage").value || "No Lineage";
+      
+      if (!name || !phone) {
+          alert("Please fill in all required fields.");
+          return;
+      }
+
+      let message = `Hello, I would like to join the ${currentClass} class.\nName: ${name}\nPhone: ${phone}\nLineage: ${lineage}`;
+      let whatsappNumber = "YOUR_WHATSAPP_NUMBER"; // Replace with your actual number
+      let whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappLink, "_blank");
+      alert("Thank you! You will be contacted soon.");
+      document.getElementById("joinForm").style.display = "none";
+  }
+
+  // Initialize the default state when page loads
+  window.onload = function() {
+      showClass(1); // Start by displaying the Encounter class by default
+  };
+</script>
+
+        
+        <h2 class="my-te">LIBRARY</h2>
+
+        <h2 id="bk">
+            <span>Read</span> or <span>Download</span> Some Books From Our Library
+          </h2> 
+
+<div class="library">     
+    <div class="book-grid">
+        <div class="book" onclick="toggleOptions(this)">
+            <img src="he.jpg" alt="Book 1">
+            <div class="book-title">Encounter</div>
+            <div class="book-options">
+                <a href="Encounter.pdf" target="_blank">Read</a>
+                <!--<a href="Encounter.pdf" download>Download</a>-->
+            </div>
+        </div>
+        <div class="book" onclick="toggleOptions(this)">
+            <img src="ah.jpg" alt="Book 2">
+            <div class="book-title">Transform</div>
+            <div class="book-options">
+                <a href="book2.pdf" target="_blank">Read</a>
+                <a href="book2.pdf" download>Download</a>
+            </div>
+        </div>
+        <div class="book" onclick="toggleOptions(this)">
+            <img src="gd.jpg" alt="Book 3">
+            <div class="book-title">Knowing</div>
+            <div class="book-options">
+                <a href="book3.pdf" target="_blank">Read</a>
+                <a href="book3.pdf" download>Download</a>
+            </div>
+        </div>
+        <div class="book" onclick="toggleOptions(this)">
+            <img src="prosper.jpg" alt="Book 3">
+            <div class="book-title">Prosperity & Life</div>
+            <div class="book-options">
+                <a href="book2.pdf" target="_blank">Read</a>
+                <a href="book2.pdf" download>Download</a>
+            </div>
+    </div>
+    <div class="book" onclick="toggleOptions(this)">
+        <img src="bible.jpg" alt="Book 3">
+        <div class="book-title">Bible Study</div>
+        <div class="book-options">
+            <a href="book2.pdf" target="_blank">Read</a>
+            <a href="book2.pdf" download>Download</a>
+        </div>
+</div>
+<div class="book" onclick="toggleOptions(this)">
+    <img src="love.jpg" alt="Book 3">
+    <div class="book-title">Love of God</div>
+    <div class="book-options">
+        <a href="book2.pdf" target="_blank">Read</a>
+        <a href="book2.pdf" download>Download</a>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+    function toggleOptions(bookElement) {
+        let options = bookElement.querySelector(".book-options");
+        let allOptions = document.querySelectorAll(".book-options");
+        allOptions.forEach(opt => { if (opt !== options) opt.style.display = "none"; });
+        options.style.display = options.style.display === "flex" ? "none" : "flex";
+    }
+</script>
+
+<div class="enrollment-section">
+    <h2>REGISTER!!</h2>
+    <h2>Enrollment Days</h2>
+    <p>
+        We welcome new participants into our church classes throughout the year.
+        Below are the upcoming enrollment dates for each class.
+        <span>Always checkout for updates!!!</span>
+    </p>
+
+    <div class="enrollment-info">
+        <h3>Upcoming Registration Days</h3>
+        <ul class="animated-list">
+            <li><strong><span>✔ Encounter Class:</span></strong> January 10 - February 5th</li>
+            <li><strong><span>✔ Transformation Class:</span></strong> March 15 - April 10th</li>
+            <li><strong><span>✔ Membership Class:</span></strong> June 1 - June 20th</li>
+            <li><strong><span>✔ Servants heart Class:</span></strong> September 5 - September 30th</li>
+            <li><strong><span>✔ Discipleship Class:</span></strong> November 10 - December 5th</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="cool">
+    <img src="qn.png" alt="">
+</div>
+    <div class="ask-question-section">
+        <h2>Ask Any Question</h2>
+        <p><span>Have any questions about a class? Feel free to ask, and we will respond as soon as possible.</p>
+    
+        <div class="question-form">
+            <textarea id="questionText" placeholder="Type your question here..." required></textarea>
+            <button onclick="sendToWhatsApp()">Send</button>
+        </div>
+    </div>
+   
+    
+    <script>
+        function sendToWhatsApp() {
+            let question = document.getElementById("questionText").value;
+            let whatsappNumber = "256123456789"; // Replace with your actual WhatsApp number
+            
+            if (!question.trim()) {
+                alert("Please enter your question before sending.");
+                return;
+            }
+    
+            let whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(question)}`;
+            window.open(whatsappLink, "_blank");
+        }
+    </script>
+    
+
+<h2 class="my-tex">EVENTS AND TESTIMONIES</h2>
+
+<div class="into-text">
+    <h2>You can watch past<span> events</span> in the slides and some<span> testimonies!</span></h2>
+    <p>As the growth department we dwelve deep into creating an impact on people's lives and some of the testimonies will be seen below.
+       We also organize some events such as bible quiz where different lineages come together to battle in spiritual matters.
+    </p>
+</div>
+
+<div class="events-section">
+    <h2 class="my-tex">Upcoming Events</h2>
+
+    <div class="event-list">
+        <div class="event-card">
+            <img src="bibq.jpg" alt="Event 1">
+            <h3 id="my">Bible Quiz</h3>
+            <button onclick="donate('school')">Donate</button>
+        </div>
+
+        <div class="event-card">
+            <img src="feed.jpg" alt="Event 2">
+            <h3 id="my">The Lords table</h3>
+            <button onclick="donate('health')">Donate</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Script to simulate payment integration -->
+<script>
+const airtelApiKey = "YOUR_AIRTEL_API_KEY_HERE";
+const mtnApiKey = "YOUR_MTN_API_KEY_HERE";
+
+function donate(eventId) {
+    const paymentMethod = prompt("Choose Payment Method: Airtel or MTN").toLowerCase();
+
+    let apiKey;
+    if (paymentMethod === 'airtel') {
+        apiKey = airtelApiKey;
+    } else if (paymentMethod === 'mtn') {
+        apiKey = mtnApiKey;
+    } else {
+        alert("Invalid payment method selected.");
+        return;
+    }
+
+    // You can replace this with actual API request
+    alert(`Processing ${paymentMethod.toUpperCase()} donation for event "${eventId}" using API key: ${apiKey}`);
+    
+    // Here, you’d send the donation to your backend/payment processor
+}
+</script>
+
+    <div class="testimony-container">
+
+        <h2 class="my">Student Testimonies</h2>
+
+        <div>
+            <div class="video-container">
+                <video id="mainVideo" controls>
+                    <source src="hey1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-name" id="videoName">John Doe</div>
+        </div>
+        <div class="video-list">
+            <video src="hey2.mp4" onclick="changeVideo(this, 'John Doe')"></video>
+            <video src="hey1.mp4" onclick="changeVideo(this, 'Jane Smith')"></video>
+            <video src="hey2.mp4" onclick="changeVideo(this, 'David Brown')"></video>
+            <video src="hey1.mp4" onclick="changeVideo(this, 'Emily Davis')"></video>
+        </div>
+    </div>
+
+<script>
+    function changeVideo(video, name) {
+        const mainVideo = document.getElementById('mainVideo');
+        const videoName = document.getElementById('videoName');
+        mainVideo.src = video.src;
+        mainVideo.play();
+        videoName.textContent = name;
+    }
+</script>
+
+</div>
+</div>
+
+
+<section class="invite-section">
+    <div class="invite-container">
+      <h2>Join Us & Spread the Word!</h2>
+      <p>Be part of our enriching classes—whether starting your journey or deepening your faith, there's a place for you. Let’s grow and walk with God together.</p>
+      <blockquote>“Let the wise hear and increase in learning, and the one who understands obtain guidance.” – Proverbs 1:5</blockquote>
+      <p>Share this opportunity and be a light to others. See you in class! ✨🙏</p>
+    </div>
+  </section>
+  
+
+<footer class="footer">
+    <p class="footer-text">&copy; 2025 Glory of Christ Church Kawaala. All rights reserved.</p>
+</footer>
+
+</div>
+
+<!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+<!-- jQuery & Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+    $('.charity-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: false,
+        fade: false, /* Change to true if you prefer a fade effect */
+        infinite: true,
+        speed: 600,
+        adaptiveHeight: true,
+        centerMode: true,
+        variableWidth: false
+    });
+});
+</script>
+</body>
+</html>
