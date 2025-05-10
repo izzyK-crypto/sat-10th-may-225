@@ -1,1 +1,2 @@
-# sat-10th-may-225
+# GLORY
+Ssimple app for church

@@ -1,0 +1,118 @@
+@media screen and (max-width: 600px) {
+body {
+font-family: 'Segoe UI', sans-serif;
+padding: 15px;
+background-color: #0b0b0b;
+}
+
+#scriptures {
+background-color: #2e0ee3;
+padding: 15px;
+border-radius: 10px;
+position: relative;
+top: 24vh;
+}
+
+#scriptures p {
+font-size: 19px;
+margin: 10px 0;
+color: #e2d9d9;
+}
+
+#scriptures button {
+margin-top: 10px;
+padding: 8px 15px;
+background-color: #007BFF;
+color: white;
+border: none;
+border-radius: 5px;
+}
+
+#giving-form {
+padding: 15px;
+border-radius: 10px;
+border: 1px solid #ddd;color: #ddd;
+color: #f0ecec;
+background-color: #080808f1;
+}
+
+form label {
+display: block;
+font-size: 16px;
+margin-bottom: 10px;
+position: relative;
+left: 5vw;
+}
+
+input[type="tel"] {
+background: #0b0b0b;
+color: #ddd;
+width: 90%;
+padding: 8px;
+font-size: 13px;
+border-radius: 15px;
+accent-color: transparent; /* Keeps inside color default or empty */
+border: 2px solid #00ff4c; /* Blue border (Bootstrap primary) */
+}
+
+button[type="submit"] {
+background-color: #1ca91e;
+color: white;
+padding: 10px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+width: 60%;
+}
+
+#thankyou {
+margin-top: 15px;
+color: green;
+font-weight: bold;
+text-align: center;
+}
+#form-actions button {
+  width: 40%;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #e0e30e;
+  color: rgb(10, 10, 10);
+  border: none;
+  border-radius: 6px;
+  margin-top: 2vh;
+  cursor: pointer;
+  position: relative;
+  left: 40vw;
+}
+ 
+#form-actions button:hover {
+  background-color: #333;
+}
+input[type="checkbox"] {
+transform: scale(1.5);
+accent-color: transparent; /* Keeps inside color default or empty */
+border: 2px solid #00ff4c; /* Blue border (Bootstrap primary) */
+border-radius: 4px;
+appearance: none;
+width: 14px;
+height: 14px;
+cursor: pointer;
+position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+content: "✔";
+position: absolute;
+left: 2px;
+top: -2px;
+font-size: 12px;
+color: #e3e8ed;
+}
+
+}
+
+@media screen and (min-width: 600px) {
+body{
+  display: none;
+}
+}

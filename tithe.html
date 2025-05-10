@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tithe & Giving</title>
+  <link rel="stylesheet" href="tithe.css" />
+</head>
+<body>
+
+  <!-- Scripture Display -->
+  <div id="scriptures">
+    <p><strong>Malachi 3:10</strong> - "Bring the whole tithe into the storehouse, that there may be food in my house..."</p>
+    <p><strong>Luke 6:38</strong> - "Give, and it will be given to you. A good measure, pressed down, shaken together and running over..."</p>
+    <button onclick="showForm()">OK</button>
+  </div>
+
+  <!-- Giving Form -->
+  <div id="giving-form" style="display:none;">
+    <h2>Select What You’re Giving For</h2>
+    <form id="titheForm" onsubmit="return handleSubmit()">
+      <label><input type="checkbox" name="activity" value="Tithe"> Tithe</label><br>
+      <label><input type="checkbox" name="activity" value="Offering"> Offering</label><br>
+      <label><input type="checkbox" name="activity" value="Church Project"> Church Project</label><br>
+      <label><input type="checkbox" name="activity" value="Mission Support"> Mission Support</label><br><br>
+
+      <label for="phone">Your Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 07XXXXXXXX" required><br><br>
+
+      <!-- EasyPay API Integration Placeholder -->
+      <button type="submit">Give Now</button>
+    </form>
+
+    <!-- Thank You Message -->
+    <div id="thankyou" style="display:none;">🙏 Thank you for your generosity!</div>
+  </div>
+
+  <!-- This is shown after scriptures -->
+<div id="form-actions" style="display: none;">
+    <button type="button" onclick="goHome()">← Back to Home</button>
+  </div>
+  
+  <script src="tithe.js"></script>
+</body>
+</html>
