@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Android-Style Web App</title>
+  <link rel="stylesheet" href="styles.css">
+   <!-- FontAwesome for the search icon -->
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Video Section 
+  <div class="video-container">
+    <video autoplay muted loop controls>
+      <source src="doc.mp4" type="video/mp4" />
+      Your browser does not support video playback.
+    </video>
+  </div>-->
+
+  <div class="heading-box">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>The Finished Work</h1>
+  </div>  
+
+  <div class="image-box">
+    <img src="bishop.png" alt="Image">
+  </div>
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="godi2.jpg" alt="slide 1">
+        <div class="description">
+          <a href="page1.html">did you see this!! click to watch</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="godi.jpg" alt="Slide 2">
+        <div class="description">
+          <a href="page2.html">Out now!! click to watch</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="impact.jpg" alt="Slide 3">
+        <div class="description">
+          <a href="page3.html">kids back!! click to watch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-container">
+    <i class="fas fa-search icon"></i>
+    <input type="text" placeholder="Search...">
+  </div>
+
+   
+  <!-- Notifications Section 
+  <div class="notification-box" id="notificationArea">
+    🔔 Admin Notice: New updates available. Please check back regularly.
+  </div>-->
+
+  <!-- Category: Church Programs -->
+<h2 class="category-heading">Church Programs</h2>
+<div class="cards">
+  <a href="projects.html" class="card-link">
+    <div class="card">
+      <img src="project.jpg" alt="Image 1" />
+      <h3>Church Projects</h3>
+    </div>
+  </a>
+  <a href="classes.html" class="card-link">
+    <div class="card">
+      <img src="class.jpg" alt="Image 2" />
+      <h3>Growth Classes</h3>
+    </div>
+  </a>
+  <a href="tithe.html" class="card-link">
+    <div class="card">
+      <img src="tithe.jpg" alt="Image 3" />
+      <h3>Give Tithe</h3>
+    </div>
+  </a>
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="enterte.jpg" alt="Image 4" />
+      <h3>MDD</h3>
+    </div>
+  </a>
+</div>
+
+<!-- Category: Media -->
+<h2 class="category-heading">Media</h2>
+<div class="cards">
+  <a href="page1.html" class="card-link">
+    <div class="card">
+      <img src="testimony.jpg" alt="Image 1" />
+      <h3>Testimonies</h3>
+    </div>
+  </a>
+  <a href="page2.html" class="card-link">
+    <div class="card">
+      <img src="gloryb.jpg" alt="Image 2" />
+      <h3>News</h3>
+    </div>
+  </a>
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="wave1.jpg" alt="Image 4" />
+      <h3>Audio Sermons</h3>
+    </div>
+  </a>
+</div>
+
+<!-- Category: Bible & Worship -->
+<h2 class="category-heading">Bible & Worship</h2>
+<div class="cards">
+  <a href="page3.html" class="card-link">
+    <div class="card">
+      <img src="lineage.png" alt="Image 3" />
+      <h3>Lineage on duty</h3>
+    </div>
+  </a>
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="bib.jpg" alt="Image 4" />
+      <h3>Bible</h3>
+    </div>
+  </a>
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="heart.jpg" alt="Image 4" />
+      <h3>Heart to Heart</h3>
+    </div>
+  </a>
+</div>
+
+<!-- Category: Marketplace -->
+<h2 class="category-heading">Kingdom Trade</h2>
+<div class="cards">
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="buy.jpg" alt="Image 4" />
+      <h3>Community Exchange</h3>
+    </div>
+  </a>
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="land1.jpg" alt="Image 4" />
+      <h3>Buy Land</h3>
+    </div>
+  </a>
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="car.jpg" alt="Image 4" />
+      <h3>Glory Motors</h3>
+    </div>
+  </a>
+</div>
+
+<!-- Category: Utilities -->
+<h2 class="category-heading">Utilities</h2>
+<div class="cards">
+  <a href="page4.html" class="card-link">
+    <div class="card">
+      <img src="note.jpeg" alt="Image 4" />
+      <h3>Take Notes</h3>
+    </div>
+  </a>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (window.innerWidth <= 600) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    cards.forEach(card => observer.observe(card));
+  });
+  </script>
+  
+  
+</body>
+</html>
